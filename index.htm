@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>hotelmaster</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
-  <!-- 상단 -->
-  <header>
-    <h1>hotelmaster</h1>
-    <p>호텔 예약 플랫폼</p>
+  <header class="top">
+    <div class="brand">
+      <h1>hotelmaster</h1>
+      <p>호텔 예약 플랫폼</p>
+    </div>
 
     <input
       type="text"
       id="search"
       placeholder="도시를 입력하세요 (서울, 부산, 제주)"
+      autocomplete="off"
     />
   </header>
 
-  <!-- 호텔 카드 리스트 (JS가 여기에 넣음) -->
   <main id="hotel-list"></main>
 
-  <!-- 상세 / 예약 화면 -->
-  <div id="detail" style="display:none;"></div>
+  <section id="detail" style="display:none;"></section>
 
-  <!-- JS -->
   <script src="script.js"></script>
-
 </body>
 </html>
