@@ -97,22 +97,28 @@ search.addEventListener("input", () => {
 
 renderList(hotels);
 function reserve() {
-  alert("예약 기능은 준비 중입니다 🙂");
-}
-.date-box {
-  margin: 15px 0;
+  detail.innerHTML = `
+    <div class="detail-card">
+      <h2>날짜 선택</h2>
+
+      <div class="date-box">
+        <label>체크인</label>
+        <input type="date" id="checkin">
+      </div>
+
+      <div class="date-box">
+        <label>체크아웃</label>
+        <input type="date" id="checkout">
+      </div>
+
+      <button class="reserve-btn" onclick="completeReserve()">
+        예약 완료
+      </button>
+
+      <br><br>
+
+      <button class="back-btn" onclick="back()">← 취소</button>
+    </div>
+  `;
 }
 
-.date-box label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.date-box input {
-  width: 100%;
-  padding: 10px;
-  font-size: 15px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
