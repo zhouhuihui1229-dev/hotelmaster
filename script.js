@@ -95,3 +95,6 @@ search.addEventListener("input", () => {
 });
 
 renderList(hotels);
+function reserve() {
+  alert("예약 기능은 준비 중입니다 🙂");
+}
