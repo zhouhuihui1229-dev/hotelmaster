@@ -1,4 +1,3 @@
-alert("JS 로드됨");
 let selectedHotel = null;
 const hotels = [
   {
