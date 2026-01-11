@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+}
+
+header {
+  background-color: #0b74e5;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+#hotel-list {
+  padding: 20px;
+}
+
+.hotel {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.hotel h2 {
+  margin: 0 0 5px 0;
+}
+
+.price {
+  color: #e74c3c;
+  font-weight: bold;
+}
