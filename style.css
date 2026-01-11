@@ -80,3 +80,25 @@ header {
   font-size: 16px;
   cursor: pointer;
 }
+.detail-card h2 {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.detail-card .price {
+  font-size: 22px;
+  margin: 15px 0;
+}
+
+.reserve-btn:hover {
+  background: #095bb5;
+}
+
+.back-btn {
+  margin-top: 15px;
+  background: none;
+  border: none;
+  color: #0b74e5;
+  font-size: 14px;
+  cursor: pointer;
+}
