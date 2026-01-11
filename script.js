@@ -134,3 +134,14 @@ function completeReserve() {
   alert(`예약 완료!\n체크인: ${inDate}\n체크아웃: ${outDate}`);
 }
 
+function completeReserve() {
+  const inDate = document.getElementById("checkin").value;
+  const outDate = document.getElementById("checkout").value;
+
+  if (!inDate || !outDate) {
+    alert("날짜를 선택해주세요");
+    return;
+  }
+
+  alert(`예약 완료!\n체크인: ${inDate}\n체크아웃: ${outDate}`);
+}
