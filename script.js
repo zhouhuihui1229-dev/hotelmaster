@@ -63,6 +63,7 @@ function showDetail(hotel) {
       <div class="detail-rating">
         ⭐ ${hotel.rating} / 5
       </div>
+function showDetail(hotel) {
 
       <p>${hotel.desc}</p>
 
