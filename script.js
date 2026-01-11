@@ -101,7 +101,10 @@ search.addEventListener("input", () => {
 
 renderList(hotels);
 function reserve() {
-  list.style.display = "none";   // ← 추가
+  // 클릭을 막는 요소들 전부 숨김
+  document.querySelector("header").style.display = "none";
+  list.style.display = "none";
+
   detail.style.display = "block";
 
   detail.innerHTML = `
@@ -128,6 +131,7 @@ function reserve() {
     </div>
   `;
 }
+
 
 
 
