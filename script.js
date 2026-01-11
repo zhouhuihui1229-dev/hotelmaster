@@ -53,15 +53,32 @@ function showDetail(hotel) {
 
   detail.style.display = "block";
   detail.innerHTML = `
-    <h2>${hotel.name}</h2>
-    <p>도시: ${hotel.city}</p>
-    <p>평점: ⭐ ${hotel.rating}</p>
-    <p>${hotel.desc}</p>
-    <p class="price">₩ ${hotel.price.toLocaleString()}</p>
-    <button onclick="back()">목록으로</button>
+    <div class="detail-card">
+      <img src="https://picsum.photos/600/300?random=${hotel.id}" />
+
+      <h2>${hotel.name}</h2>
+
+      <div class="detail-rating">
+        ⭐ ${hotel.rating} / 5
+      </div>
+
+      <p>${hotel.desc}</p>
+
+      <p class="price">₩ ${hotel.price.toLocaleString()}</p>
+
+      <button class="reserve-btn" onclick="reserve()">
+        예약하기
+      </button>
+
+      <br><br>
+
+      <button onclick="back()">← 목록으로</button>
+    </div>
   `;
+
   list.innerHTML = "";
 }
+
 
 
 
