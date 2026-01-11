@@ -99,6 +99,7 @@ search.addEventListener("input", () => {
 
 renderList(hotels);
 function reserve() {
+  list.style.display = "none";   // ← 추가
   detail.style.display = "block";
 
   detail.innerHTML = `
@@ -125,6 +126,7 @@ function reserve() {
     </div>
   `;
 }
+
 
 
 function completeReserve() {
