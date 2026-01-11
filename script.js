@@ -1,4 +1,3 @@
-alert("JS 새로 반영됨");
 const hotels = [
   {
     id: 1,
