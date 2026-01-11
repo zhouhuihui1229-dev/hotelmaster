@@ -119,3 +119,7 @@ header {
   border-radius: 6px;
   border: 1px solid #ccc;
 }
+#detail {
+  position: relative;
+  z-index: 10;
+}
