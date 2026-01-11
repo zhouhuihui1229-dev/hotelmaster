@@ -85,21 +85,13 @@ function showDetail(hotel) {
 
 function back() {
   detail.style.display = "none";
-  list.style.display = "block";  // ⭐ 다시 보여줌
+
+  document.querySelector("header").style.display = "block";
+  list.style.display = "block";
+
   renderList(hotels);
 }
 
-
-
-search.addEventListener("input", () => {
-  const value = search.value.trim();
-  const filtered = hotels.filter(h =>
-    h.city.includes(value)
-  );
-  renderList(filtered);
-});
-
-renderList(hotels);
 function reserve() {
   // 클릭을 막는 요소들 전부 숨김
   document.querySelector("header").style.display = "none";
