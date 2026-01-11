@@ -84,8 +84,10 @@ function showDetail(hotel) {
 
 
 function back() {
-  renderList(hotels);
+  detail.style.display = "none"; // 상세/예약 화면 숨김
+  renderList(hotels);            // 호텔 리스트 다시 그림
 }
+
 
 search.addEventListener("input", () => {
   const value = search.value.trim();
