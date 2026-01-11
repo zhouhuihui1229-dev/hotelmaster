@@ -97,10 +97,7 @@ search.addEventListener("input", () => {
 
 renderList(hotels);
 function reserve() {
-  alert("예약 버튼 눌림"); // ← 확인용
   detail.style.display = "block";
-function reserve() {
-  detail.style.display = "block"; // ⭐ 이 줄이 핵심
 
   detail.innerHTML = `
     <div class="detail-card">
@@ -126,6 +123,7 @@ function reserve() {
     </div>
   `;
 }
+
 
 function completeReserve() {
   const inDate = document.getElementById("checkin").value;
