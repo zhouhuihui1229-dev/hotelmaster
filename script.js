@@ -121,6 +121,7 @@ function reserve() {
     </div>
   `;
 }
+
 function completeReserve() {
   const inDate = document.getElementById("checkin").value;
   const outDate = document.getElementById("checkout").value;
