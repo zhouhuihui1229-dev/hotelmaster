@@ -1,0 +1,10 @@
+{
+  "name": "hotelmaster",
+  "short_name": "hotelmaster",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#0b74e5",
+  "icons": []
+}
