@@ -72,7 +72,8 @@ function showDetail(hotel) {
 
       <br><br>
 
-      <button onclick="back()">← 목록으로</button>
+      <button class="back-btn" onclick="back()">← 목록으로</button>
+
     </div>
   `;
 
