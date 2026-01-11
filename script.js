@@ -97,6 +97,8 @@ search.addEventListener("input", () => {
 
 renderList(hotels);
 function reserve() {
+  detail.style.display = "block"; // ⭐ 이 줄이 핵심
+
   detail.innerHTML = `
     <div class="detail-card">
       <h2>날짜 선택</h2>
