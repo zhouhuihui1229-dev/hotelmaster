@@ -187,3 +187,4 @@ function completeReserve() {
   alert("예약이 완료되었습니다!");
 }
 
+detail.style.display = "none";
