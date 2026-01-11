@@ -1,3 +1,4 @@
+let selectedHotel = null;
 const hotels = [
   {
     id: 1,
