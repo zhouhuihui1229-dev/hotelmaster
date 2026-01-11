@@ -106,3 +106,39 @@ body{
 }
 
 .small{ font-size:13px; opacity:0.9; }
+/* 모바일 앱 느낌 강화 */
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding-bottom: 14px;
+}
+
+#hotel-list, #detail {
+  max-width: 520px;   /* 모바일 앱 폭 느낌 */
+  margin: 0 auto;
+}
+
+.hotel, .detail-card {
+  border-radius: 16px;
+}
+
+.btn {
+  height: 48px;       /* 터치 영역 확보 */
+}
+
+/* 검색창을 헤더 아래로 딱 붙여 앱 느낌 */
+#search {
+  margin-top: 10px;
+}
+
+/* 모바일에서 여백/글씨 최적화 */
+@media (max-width: 420px) {
+  .brand h1 { font-size: 20px; }
+  .hotel h2 { font-size: 17px; }
+  .price { font-size: 16px; }
+}
