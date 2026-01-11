@@ -99,3 +99,20 @@ renderList(hotels);
 function reserve() {
   alert("예약 기능은 준비 중입니다 🙂");
 }
+.date-box {
+  margin: 15px 0;
+}
+
+.date-box label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.date-box input {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
