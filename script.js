@@ -187,3 +187,4 @@ function completeReserve() {
 }
 
 detail.style.display = "none";
+renderList(hotels);
