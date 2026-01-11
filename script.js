@@ -49,6 +49,8 @@ function renderList(data) {
 }
 
 function showDetail(hotel) {
+  window.scrollTo(0, 0);   // ← 이 줄이 추가된 핵심
+
   detail.style.display = "block";
   detail.innerHTML = `
     <h2>${hotel.name}</h2>
@@ -60,6 +62,7 @@ function showDetail(hotel) {
   `;
   list.innerHTML = "";
 }
+
 
 function back() {
   renderList(hotels);
