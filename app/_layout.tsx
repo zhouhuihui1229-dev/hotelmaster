@@ -1,38 +1,30 @@
 import { Stack } from "expo-router";
 import React, { createContext, useContext, useMemo, useState } from "react";
 
-type FavoritesCtx = {
+type Ctx = {
   favorites: Record<string, boolean>;
-  toggleFavorite: (id: string) => void;
-  isFavorite: (id: string) => boolean;
+  toggle: (id: string) => void;
+  isFav: (id: string) => boolean;
 };
 
-const FavoritesContext = createContext<FavoritesCtx | null>(null);
+const FavCtx = createContext<Ctx | null>(null);
 
 export function useFavorites() {
-  const ctx = useContext(FavoritesContext);
-  if (!ctx) throw new Error("useFavorites must be used within FavoritesProvider");
-  return ctx;
-}
-
-function FavoritesProvider({ children }: { children: React.ReactNode }) {
-  const [favorites, setFavorites] = useState<Record<string, boolean>>({});
-
-  const toggleFavorite = (id: string) => {
-    setFavorites((prev) => ({ ...prev, [id]: !prev[id] }));
-  };
-
-  const isFavorite = (id: string) => !!favorites[id];
-
-  const value = useMemo(() => ({ favorites, toggleFavorite, isFavorite }), [favorites]);
-
-  return <FavoritesContext.Provider value={value}>{children}</FavoritesContext.Provider>;
+  const c = useContext(FavCtx);
+  if (!c) throw new Error("useFavorites outside provider");
+  return c;
 }
 
 export default function RootLayout() {
+  const [favorites, setFav] = useState<Record<string, boolean>>({});
+  const toggle = (id: string) => setFav(p => ({ ...p, [id]: !p[id] }));
+  const isFav = (id: string) => !!favorites[id];
+  const value = useMemo(() => ({ favorites, toggle, isFav }), [favorites]);
+
   return (
-    <FavoritesProvider>
-      <Stack />
-    </FavoritesProvider>
+    <FavCtx.Provider value={value}>
+      <Stack screenOptions={{ headerShown: false }} />
+    </FavCtx.Provider>
   );
 }
+
